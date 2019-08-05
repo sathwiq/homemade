@@ -30,6 +30,6 @@ router.post("/",  function(req, res){
             }
         ]
       };
-      db.collection('vendor').doc('NyqJsmPJ9Z15TVbhX8bt').set(data);
+      db.collection('vendor').doc('').set(data);
 });
 module.exports = router;
