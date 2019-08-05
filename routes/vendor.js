@@ -30,6 +30,7 @@ router.post("/",  function(req, res){
             }
         ]
       };
-      db.collection('vendor').doc('').set(data);
+      db.collection('vendor').doc().set(data);
+
 });
 module.exports = router;
