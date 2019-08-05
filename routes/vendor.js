@@ -30,7 +30,14 @@ router.post("/",  function(req, res){
             }
         ]
       };
-      db.collection('vendor').doc().set(data);
+      db.collection('vendor').doc().set(data)
+        .then(function () {
+            res.render("success.ejs");
+            
+        })
+        .catch(()=>{
+            res.render("error.ejs");
+        })
 
 });
 module.exports = router;
